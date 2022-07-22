@@ -8,12 +8,8 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            if (Char.IsLetter(c))
-            {
-                return true;
-            }
+           return Char.IsLetter(c) ? true : false;
             
-            return false;
         }
 
         public bool CountOfElementsIsEven(string[] vals)
@@ -33,27 +29,30 @@ namespace ChallengesWithTestsMark8
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            double max = int.MinValue;
-            double min = int.MaxValue;
+            //double max = int.MinValue;
+            //double min = int.MaxValue;
 
-            if(numbers == null || numbers.Count() == 0)
-            {
-                return 0;
-            }
+            //if (numbers == null || numbers.Count() == 0)
+            //{
+            //    return 0;
+            //}
 
-            foreach(var number in numbers)
-            {
-                if(number < min)
-                {
-                    min = number;
-                }
-                if(number > max)
-                {
-                    max = number;
-                }
+            //foreach (var number in numbers)
+            //{
+            //    if (number < min)
+            //    {
+            //        min = number;
+            //    }
+            //    if (number > max)
+            //    {
+            //        max = number;
+            //    }
 
-            }
-            return max + min;
+            //}
+            //return max + min;
+
+            return numbers == null || numbers.Count() == 0 ? 0 : numbers.Min() + numbers.Max();
+
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
@@ -63,30 +62,24 @@ namespace ChallengesWithTestsMark8
 
         public int Sum(int[] numbers)
         {
-            if (numbers == null)
-            {
-                return 0;
-            }
-            return numbers.Sum();
+            return numbers == null ? 0 : numbers.Sum();
         }
 
         public int SumEvens(int[] numbers)
         {
 
-            return numbers.Where(x => x % 2 == 0).Sum();
+            return numbers == null ? 0: numbers.Where(x => x % 2 == 0).Sum();
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            if (numbers == null)
-            {
-                return false;
-            }
-            return numbers.Sum() % 2 == 0 ? false : true;
+            return numbers == null ? false : numbers.Sum() % 2 == 0 ? false : true;
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
+            
+            
             long count = 0;
             for(int i =1; i < number; i++)
             {

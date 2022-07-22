@@ -6,14 +6,7 @@ namespace ChallengesWithTestsMark8
     {
         public bool AreTwoNumbersTheSame(int num1, int num2)
         {
-            if(num1 == num2)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return num1 == num2;
         }
 
         public double Subtract(double minuend, double subtrahend)
@@ -38,11 +31,7 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
-            if(nameOfPerson.Length == 0)
-            {
-                return "Hello!";
-            }
-            return $"Hello, {nameOfPerson}!";
+           return nameOfPerson.Length == 0 ? "Hello!" : $"Hello, {nameOfPerson}!";
         }
 
         public string GetHey()
